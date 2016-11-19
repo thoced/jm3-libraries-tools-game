@@ -40,4 +40,10 @@ triggerSpatial.addControl(tc);  // Adding the controler to the Spatial Node
 
 ![Image Scene-graph](https://github.com/thoced/jm3-libraries-tools-game/blob/master/src/images/blender-scene.png)
 
+### BoundingBox
+
+Attention, the triggering is done thanks to the generation of the BoundingBox of the Spatial. Rotations of the Node Spatial Trigger are not applied. Only Translations and scaling are applied.
+
+Attention, le déclenchement est effectué grâce à la génération du BoundingBox du Spatial. Les rotations du Node Spatial Trigger ne sont pas appliqués. Seul les Translations et les mise à l'échelle sont appliqués.
+
 ThoCed
