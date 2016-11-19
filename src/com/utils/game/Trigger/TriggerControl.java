@@ -116,7 +116,9 @@ public class TriggerControl extends AbstractControl {
     
     public Control cloneForSpatial(Spatial spatial) {
         TriggerControl control = new TriggerControl(this.getName());
-        //TODO: copy parameters to new Control
+        control.setActor(actor);
+        control.setSpatial(spatial);
+               //TODO: copy parameters to new Control
         return control;
     }
     
