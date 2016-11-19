@@ -38,6 +38,8 @@ public class TriggerControl extends AbstractControl {
 
     // actor associate
     private Spatial actor;
+    // BoundingBox
+     BoundingBox bbox;
     // Listener collection 
     private Collection<TriggerListener> collections = new ArrayList<TriggerListener>();
     // Variable boolean determining whether the trigger is in the activated position
@@ -71,19 +73,30 @@ public class TriggerControl extends AbstractControl {
     {
         return collections.size();
     }
+
+    @Override
+    public void setSpatial(Spatial spatial) 
+    {
+        super.setSpatial(spatial); //To change body of generated methods, choose Tools | Templates.
+        
+        if(spatial != null)
+        {
+            // initialize boundingbox
+            bbox = new BoundingBox(spatial.getLocalTranslation(),
+                   this.getSpatial().getLocalScale().x,
+                   this.getSpatial().getLocalScale().y,
+                   this.getSpatial().getLocalScale().z);
+        }
+    }
+    
+    
     
     @Override
     protected void controlUpdate(float tpf) 
     {
-       if(actor != null) // If an actor is hooked
+       if(actor != null && bbox != null) // If an actor is hooked
        {
-           BoundingBox b = new BoundingBox(this.getSpatial().getLocalTranslation(),
-                   this.getSpatial().getLocalScale().x,
-                   this.getSpatial().getLocalScale().y,
-                   this.getSpatial().getLocalScale().z);
-           
-           
-             if(b.intersects(actor.getWorldBound()))
+             if(bbox.intersects(actor.getWorldBound()))
              {
                 if(!OnTriggerIsActived)
                 {
