@@ -8,6 +8,9 @@ The TriggerControl class triggers an event picked up by a listener. TriggerContr
 
 La classe TriggerControl permet de déclencher un évenement capté par un listener. TriggerControl est attaché à un Spatial Empty créé depuis le logiciel Blender. Un acteur est attaché ensuite au TriggerControl et lorsque l'objet acteur entre dans la zone du trigger, un evenement est envoyé à tous les objets qui implémentent TriggerListener. Lorsque l'acteur sort de la zone du TriggerControl. Un autre évenement est également envoyé.
 
+### Possible use, practical case...
+
+For example, the trigger can be used for opening doors, stuffing up or down an elevator, turning lights on or off, etc.
 
 ### code example for use TriggerControl
 
