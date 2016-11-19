@@ -10,7 +10,9 @@ La classe TriggerControl permet de déclencher un évenement capté par un liste
 
 ### Possible use, practical case...
 
-For example, the trigger can be used for opening doors, stuffing up or down an elevator, turning lights on or off, etc.
+For example, the trigger can be used for opening doors, raising or lowering an elevator, turning lights on or off, etc
+
+Par exemple, le trigger peut être utilisé pour l'ouverture de portes, faire monter ou descendre un ascensseur, allumer ou eteindre des lumières, etc... 
 
 ### code example for use TriggerControl
 
