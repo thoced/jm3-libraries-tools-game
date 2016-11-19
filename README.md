@@ -8,3 +8,27 @@ The TriggerControl class triggers an event picked up by a listener. TriggerContr
 
 La classe TriggerControl permet de déclencher un évenement capté par un listener. TriggerControl est attaché à un Spatial Empty créé depuis le logiciel Blender. Un acteur est attaché ensuite au TriggerControl et lorsque l'objet acteur entre dans la zone du trigger, un evenement est envoyé à tous les objets qui implémentent TriggerListener. Lorsque l'acteur sort de la zone du TriggerControl. Un autre évenement est également envoyé.
 
+
+### code example for use TriggerControl
+
+``` 
+Spatial triggerSpatial = scene.getChild("Trigger01"); // Obtaining the space with the name 'Trigger01'
+TriggerControl tc = new TriggerControl("Trigger01");
+tc.setActor(Actor);             // Actor is a spatial object that will trigger the event
+tc.addTriggerListener(this);    // Adding the listener
+triggerSpatial.addControl(tg);  // Adding the controler to the Spatial Node
+```
+
+### code example for use TriggerListener
+
+``` 
+ public void triggerOn(TriggerControl tc)
+ {
+     // Code to execute when the actor enters the trigger.
+ }
+
+ public void triggerOff(TriggerControl tc) 
+ {
+     // Code to execute when the actor exits the trigger.    
+ }
+  ``` 
