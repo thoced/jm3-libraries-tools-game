@@ -16,7 +16,7 @@ Spatial triggerSpatial = scene.getChild("Trigger01"); // Obtaining the space wit
 TriggerControl tc = new TriggerControl("Trigger01");
 tc.setActor(Actor);             // Actor is a spatial object that will trigger the event
 tc.addTriggerListener(this);    // Adding the listener
-triggerSpatial.addControl(tg);  // Adding the controler to the Spatial Node
+triggerSpatial.addControl(tc);  // Adding the controler to the Spatial Node
 ```
 
 ### code example for use TriggerListener
