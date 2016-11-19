@@ -32,3 +32,11 @@ triggerSpatial.addControl(tc);  // Adding the controler to the Spatial Node
      // Code to execute when the actor exits the trigger.    
  }
   ``` 
+### Creating the Empty Trigger with the blender software
+
+![Image Add](https://github.com/thoced/jm3-libraries-tools-game/blob/master/src/images/blender-add-empty.png)
+
+![Image Scene](https://github.com/thoced/jm3-libraries-tools-game/blob/master/src/images/blender-trigger.png)
+
+![Image Scene-graph](https://github.com/thoced/jm3-libraries-tools-game/blob/master/src/images/blender-scene.png)
+
