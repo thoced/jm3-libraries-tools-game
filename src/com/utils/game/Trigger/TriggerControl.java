@@ -36,10 +36,15 @@ public class TriggerControl extends AbstractControl {
     //appear in the SDK properties window and can be edited.
     //Right-click a local variable to encapsulate it with getters and setters.
 
+    // actor associate
     private Spatial actor;
+    // Listener collection 
     private Collection<TriggerListener> collections = new ArrayList<TriggerListener>();
-    private boolean OnTriggerIsDone = false;
+    // Variable boolean determining whether the trigger is in the activated position
+    private boolean OnTriggerIsActived = false;
+    // display debug
     private boolean debug = false;
+    // name of trigger
     private String name;
     
     public TriggerControl(String name)
@@ -70,35 +75,35 @@ public class TriggerControl extends AbstractControl {
     @Override
     protected void controlUpdate(float tpf) 
     {
-       if(actor != null)
+       if(actor != null) // If an actor is hooked
        {
            BoundingBox b = new BoundingBox(this.getSpatial().getLocalTranslation(),
                    this.getSpatial().getLocalScale().x,
                    this.getSpatial().getLocalScale().y,
                    this.getSpatial().getLocalScale().z);
-         
+           
            
              if(b.intersects(actor.getWorldBound()))
              {
-                if(!OnTriggerIsDone)
+                if(!OnTriggerIsActived)
                 {
                     for(TriggerListener tl : collections)
                     {
                         tl.triggerOn(this); // appel triggerOn sur les objets attachés
                     }
                     
-                     OnTriggerIsDone = true;
+                     OnTriggerIsActived = true;
                 }
                           
              }
              else
-                 if(OnTriggerIsDone)
+                 if(OnTriggerIsActived)
                  {
                       for(TriggerListener tl : collections)
                     {
                         tl.triggerOff(this); // appel triggerOff sur les objets attachés
                     }
-                       OnTriggerIsDone = false;
+                       OnTriggerIsActived = false;
                  }
        }
     }
