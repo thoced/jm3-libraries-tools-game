@@ -40,3 +40,4 @@ triggerSpatial.addControl(tc);  // Adding the controler to the Spatial Node
 
 ![Image Scene-graph](https://github.com/thoced/jm3-libraries-tools-game/blob/master/src/images/blender-scene.png)
 
+ThoCed
