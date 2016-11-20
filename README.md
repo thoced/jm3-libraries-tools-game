@@ -45,7 +45,7 @@ triggerSpatial.addControl(tc);  // Adding the controler to the Spatial Node
 
 ![Image Scene-graph](https://github.com/thoced/jm3-libraries-tools-game/blob/master/src/images/blender-scene.png)
 
-> (rename the node in blender software and use this name in the code for extract the Spatial Node Trigger : for example 'Trigger01')
+> rename the node in blender software and use this name in the code for extract the Spatial Node Trigger : for example 'Trigger01'
 
 ### BoundingBox
 
